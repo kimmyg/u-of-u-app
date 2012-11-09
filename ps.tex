@@ -1,0 +1,73 @@
+\documentclass{letter}
+
+\begin{document}
+\begin{letter}
+\opening{To whom it may concern,}
+
+I am originally from Orem, Utah and resided there until I began study at BYU with the 
+intent to pursue mechanical engineering. After my freshman year, I deferred my studies 
+to serve an LDS mission in Germany. After returning, I changed my pursuit to math and 
+computer science and received a BS in Mathematics with an advanced minor in Computer 
+Science in 2010.
+
+I immediately commenced pursuit of an MS 
+in Statistics from the same institution. The program had some emphasis on computation, 
+especially for simulation. Recognizing that my interest lie more in the computational 
+aspect than the statistical, I applied to the BYU Computer Science MS program and transferred the next 
+semester. Although not directly related to my ultimate course, I view my exposure to 
+modern statistical machinery as extremely profitable, giving me an insider's background 
+to current approaches and especially the Bayesian paradigm.
+
+My first two semesters in earnest pursuit of an MS in Computer Science were devoted 
+primarily to coursework. I worked under Dr. Kent Seamons in the Internet Security Research
+Lab (ISRL) implementing Kiwi, a secure email system atop Gmail, and writing papers thereabouts. 
+The approach favored useability by using secure overlays, a distinctive interface designed 
+to help users easily recognize secure channels, and a key registration scheme that 
+accommodated a grassroots adoption model.
+
+In July 2011, the ISRL participated in a nationwide computer security competition hosted by MITRE. Our 
+four-man team handily beat all others including teams from Berkeley and UT San Antonio as well 
+as at least six teams representing MITRE itself. The winners were registered to compete at the 
+DEFCON Open CTF and also flown to Florida to receive handsome paperweights. I can send you a 
+picture of mine.
+
+In a particular paper the ISRL produced involving strand spaces, I needed technical consultation 
+to prove a theorem of correctness of a security protocol, which I received from Dr. Jay McCarthy. 
+Upon discovering his research area and aptitude, I arranged for him to become my advisor, despite 
+the setback of a starkly new research area.
+
+My research under Dr. McCarthy centered around continuation marks. First implemented in PLT 
+Scheme (now Racket), continuation marks are a programming language feature which generalizes 
+stack inspection. As such, they can express other language features that rely on stack inspection 
+such as the security model for Java and C\# and aspect-oriented programming. Tools which require 
+access to the stack--such as debuggers, algebraic steppers, and profilers--can be implemented in 
+terms of continuation marks and because they permit stack inspection at the language level, these 
+tools have zero porting cost above that of the host language.
+
+I first looked at developing a monadic semantics for continuation marks. However, none of the 
+"obvious" approaches succeeded and I began to look at expressing continuation marks with other 
+notions of computation. The lambda calculus was a natural destination and I constructed two 
+transformations from a language imbued with continuation marks to the pure lambda calculus: one 
+in direct-style to provide a canonical desugaring and the other in continuation-passing style, 
+folding the transformation into CPS proper to aide compilers which take such an approach. In both 
+of these, I used Redex to harden each definition for correctness with testing. Because the source language had a formal 
+semantics, correctness entailed the preservation of program meaning by the transformation. This 
+I formally proved for the CPS version.
+
+With this transformation in hand, I sought an eager, higher-order language to enhance with continuation 
+marks and found JavaScript. However, continuation marks have particular behavior with respect to tail-
+call optimization which most implementations of JavaScript lack (though the language itself has a 
+notion of tail position). This presented me with the option of adopting the implementation's tail-call 
+optimization status or simulating correct tail-call behavior in all implementations; I chose the latter.
+
+I submitted a paper about this research to the 22nd European Symposium on Programming.
+
+This project represents my introduction to programming language research but 
+
+I am interested in the role of language in creating correct, secure, and efficient programs.
+
+I also recognize the general misunderstanding of 
+
+\closing{Cordially,}
+\end{letter}
+\end{document}
